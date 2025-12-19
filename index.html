@@ -3,10 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
+    <title>Imagem com Texto</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #1a1a1a;
+            padding: 20px;
+        }
+
+        .container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .container img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .texto {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-family: Arial, sans-serif;
+            font-size: 3rem;
+            font-weight: bold;
+            text-align: center;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+            padding: 10px 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello World!</h1>
-    <p>GitHub Pages está a funcionar.</p>
+    <div class="container">
+        <img src="image.png" alt="Imagem de fundo">
+        <div class="texto">A tua frase aqui</div>
+    </div>
 </body>
 </html>
